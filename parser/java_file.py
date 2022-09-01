@@ -1,6 +1,6 @@
-import java
+from java import literals as java_literals
 import smali
-from typing import List
+from typing import List, Tuple
 
 class Line(List[str]):
     def string(self) -> str:
@@ -33,9 +33,11 @@ class JavaFile:
     def last(self) -> Line:
         return self.lines[len(self.lines) - 1]
     
-    def last_class_declaration(self) -> Line, int:
+    def last_class_declaration(self) -> Tuple[Line, int]:
         for i in range(len(self.lines) - 1, -1, -1):
             line = self.lines[i]
             for word in line:
-                pass
+                if word == java_literals._class:
+                    return line, i
+        return None, -1
 
