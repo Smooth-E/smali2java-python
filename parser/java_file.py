@@ -24,6 +24,8 @@ def get_class_name(jvm_name :str) -> str:
         # if ends with semicolon, drop it
         if joined_name[len(joined_name) - 1] == ';':
             joined_name = joined_name[:len(joined_name) - 1]
+        if joined_name[0] == 'L':
+            joined_name = joined_name[1:]
         return joined_name
 
 def get_method_name(method_and_type: str) -> str:
@@ -54,8 +56,10 @@ class JavaFile:
         line = '\t' * self.indent + line
         return line
 
-    def add_line(self, line :Line) -> None:
-        self.lines.append(self.indentate(line))
+    def add_line(self, line :list[str]) -> None:
+        converted_line = Line()
+        for word in line: converted_line.append(word)
+        self.lines.append(self.indentate(converted_line))
 
     def first(self) -> Line:
         return self.lines[0]

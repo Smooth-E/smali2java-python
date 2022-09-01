@@ -12,11 +12,11 @@ def test_class(input :str, expected_output :str) -> None:
 
 def main() -> None:
     test_class('.class Lcom/example/app/MainActivity$4', \
-        'class Lcom.example.app.MainActivity$4 {' )
+        'class com.example.app.MainActivity$4 {' )
     test_class('.class public Lcom/example/app/MainActivity$4', \
-        'public class Lcom.example.app.MainActivity$4 {' )
+        'public class com.example.app.MainActivity$4 {' )
     test_class('.class public interface abstract Lcom/example/app/MainActivity$4', \
-        'public abstract class Lcom.example.app.MainActivity$4 {' )
+        'public abstract class com.example.app.MainActivity$4 {' )
 
 if __name__ == '__main__':
     main()
