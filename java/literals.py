@@ -1,0 +1,8 @@
+_class               = "class"
+extends           = "extends"
+implements    = "implements"
+static               = "static"
+abstract          = "abstract"
+interface         = "interface"
+int                     = "int"
+synchronized = "synchronized"
