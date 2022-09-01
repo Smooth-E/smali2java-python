@@ -1,6 +1,4 @@
-from distutils.util import split_quoted
 import os
-from pydoc import classname
 import typing
 import java_literals
 import java_types
@@ -41,15 +39,15 @@ class Line(List[str]):
         no_space_before_semicolon = no_space_after_dot.replace(' ;', ';', -1)
         return no_space_before_semicolon
 
-
 class JavaFile:
-    lines :List[Line]
-    imports :List[str]
-    extends :str
-    implements : List[str]
-    class_name : str
-    indent :int
-    smali_lines :int
+    def __init__(self) -> None:
+        self.lines       :list[Line] = []
+        self.imports     :List[str]  = []
+        self.extends     :str        = ''
+        self.implements  : List[str] = []
+        self.class_name  : str       = ''
+        self.indent      :int        = 0
+        self.smali_lines :int        = 0
 
     def indentate(self, line :str) -> str:
         if self.indent < 1: return line
