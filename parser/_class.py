@@ -22,7 +22,7 @@ class ClassParser:
             interface_or_abstract = java_literals.abstract
             class_name_index += 1
         name = java_file.get_class_name(current_line[class_name_index])
-        line :List[str] = []
+        line = Line()
         if accessor != '': line.append(accessor)
         if interface_or_abstract != '': line.append(interface_or_abstract)
         line.append(java_literals._class)
