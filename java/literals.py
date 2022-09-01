@@ -1,8 +1,8 @@
-_class               = "class"
-extends           = "extends"
-implements    = "implements"
-static               = "static"
-abstract          = "abstract"
-interface         = "interface"
-int                     = "int"
-synchronized = "synchronized"
+_class       = 'class'
+extends      = 'extends'
+implements   = 'implements'
+static       = 'static'
+abstract     = 'abstract'
+interface    = 'interface'
+int          = 'int'
+synchronized = 'synchronized'

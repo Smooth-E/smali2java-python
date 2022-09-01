@@ -1,1 +1,1 @@
-object_class_java = "java.lang.Object"
+object_class_java = 'java.lang.Object'
