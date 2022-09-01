@@ -1,0 +1,1 @@
+print('whatever'[:len('whatever') - 1])
